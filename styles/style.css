@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --primaryColor: #3634E5; /* cor primária azul escuro */
+    /* um adendo, SEMPRE QUE FOR UTILIZAR A VARIÁVEL, TEM QUE CHAMAR POR var(--nomeDaVariavel) */
+    --bgColor: #000000;
+    --secondaryColor: #f6f6f6;
+    --font1: "Krona One", sans-serif;
+    --font2: "Montserrat", sans-serif;
+    
+
+}
+
+*{
+    /* resetando o css */
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    /* "box sizing: border-box" para garantir que os elementos filhos não fiquem fora dos elementos pai */
+    /* height: 100vh; ---> Usado no começo para definir que todo conteúdo da página fosse o body, porém com a criação do footer, não é mais necessário */
+    box-sizing: border-box;
+    background-color: var(--bgColor);
+    color: #f6f6f6;
+    
+}
+
+.cabecalho{
+    display: flex;
+    margin: 3% 0% -1% 15%;
+}
+
+
+.cabecalho__links__menu{
+    font-family: var(--font2);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primaryColor);
+    margin-right: 80px;
+    text-decoration: none;
+
+}
+
+
+span{
+    /* span é outra forma de destacar texto sem deixar o texro em negrito */
+    color: red;
+}
+
+.apresentacao{
+    /* display flex no elemento pai */
+    /* "justify0content" para organizar a posição dos elementos horizontalmente dentro do container e "align-items" para organizar verticalmente*/
+    /* uso do margin para arrumar o posicionamento e distanciar o elemento da borda da página */
+    margin: 8% 15%;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo{
+    /* uso do "flex-direction" para definir a direção do nosso display flex, column para organizar os containers verticalmente. Por padrão ele vem row, em linha */
+    /* gap para definir uma distância entre os elementos de forma isométrica  */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.apresentacao__conteudo__titulo{
+    /* 1rem = 16px --> Uso do rem para fornecer acessibilidade do usuário */
+    font-size: 2.25rem;
+    font-family:var(--font1);
+    font-optical-sizing: auto;
+
+}
+
+.destaqueTitulo{
+    color: var(--primaryColor);
+}
+
+.apresentacao__conteudo__paragrafo{
+    font-size: 1.5rem;
+    font-family: var(--font2);
+}
+
+.apresentacao__conteudo__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo__links__subtitulo{
+    font-family:var(--font1);
+    font-weight: 400;
+}
+
+.apresentacao__conteudo__links__link{
+    /* uso do "border" para criar borda no container e "border-radius" para arredondar a borda // o ordem do "border" é: tamanho > tipo > cor */
+    /* "text-decoration" para resetar o texto e tirar o sublinhado */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width:  378px;
+    text-align: center;
+    border: 2px solid var(--primaryColor);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    color: var(--secondaryColor);
+    font-family: var(--font2);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.apresentacao__conteudo__links__link:hover{
+    /* transform scale pra aumentar o tamanho do container quando passar o mouse e transition para alterar a velocidade da ação */
+    background-color: var(--bgColor);
+    transform: scale(1.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.imagemLinkedin{
+    /* Com o usp do "position: relative" eu consigo alterar a posição da imagem do linkedin em relação à posição original, o que torna bem útil */
+    position: relative;
+    top: -4px;
+}
+
+.apresentacao_imagem{
+    width: 50%;
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font2);
+    font-weight: 400;
+    
+}
+
+.rodape_about{
+    display: flex;
+    justify-content: center;
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font2);
+    font-weight: 400;
+    margin-top: 13%;
+}
+
+@media (max-width: 1200px){
+
+    .cabecalho{
+       padding: 3% 0%;
+       justify-content: center;
+       margin: 0 0 0 10% ;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 8% 0%;
+        
+    }
+    
+    .apresentacao__conteudo{
+        width: auto;
+    }
+
+}

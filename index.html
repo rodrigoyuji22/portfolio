@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- Na criação de classes, os nomes podem ser com __ ou nomeNome para bom uso da sintaxe -->
+    <header class="cabecalho">
+        <!-- a tag <nav> é utilizada para inserir os links de navegação da página -->
+        <nav class="cabecalho__links">
+            <a class="cabecalho__links__menu" href="">Home</a>
+            <a class="cabecalho__links__menu" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <!-- Uso do section para agrupar um grupo que possui título e fazem sentido juntas -->
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="destaqueTitulo">com um frontend de qualidade</strong>
+            </h1>
+            <p class="apresentacao__conteudo__paragrafo">Olá! Sou Rodrigo Yuji, estudante de desenvolvimento Front-end, buscando adentrar no mercado da tecnologia. </p>
+            <!-- Uso da div para agrupar um grupo de elementos que serão estilizados sem relação semântica -->
+            <div class="apresentacao__conteudo__links">
+                <h2 class="apresentacao__conteudo__links__subtitulo">Acesse minhas redes</h2>
+                <!-- uso do "target="_blank" rel="noopener noreferrer" para abrir os links em uma nova aba e em segurança contra ataques tabnabbing -->
+                <a class="apresentacao__conteudo__links__link" href="https://www.linkedin.com/in/rodrigo-koike-83018a2b4/" target="_blank" rel="noopener noreferrer"><img src="./assets/linkedin.png" class="imagemLinkedin">Linkedin</a>
+                <a class="apresentacao__conteudo__links__link" href="https://github.com/rodrigoyuji22" target="_blank" rel="noopener noreferrer"><img src="./assets/github.png">Github</a>
+            </div>
+        </section>
+        <img class="apresentacao_imagem"  src="./assets/imagem.png">
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Rodrigo Yuji</p>
+    </footer>
+</body>
+</html>
